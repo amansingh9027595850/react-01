@@ -1,0 +1,126 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #f1f1f1;
+  color: #111; */
+}
+html,body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.parent{
+  /* height: 100vh; */
+  min-height: 100vh;
+  width: 100%;
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card{
+  height: 330px;
+  width: 280px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.save{
+  color: #111;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.card .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+.top img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #dadada;
+  padding: 2px;
+  position: relative;
+  left: -30px;
+}
+.top button{
+  display: flex;
+  align-items: center;
+  border: 1px solid #dadada;
+  padding: 4px 8px;
+  font-size: 12px;
+  /* border-radius: 5px; */
+  gap: 3px;
+  background-color: transparent;
+  color: #dadada;
+}
+.center h3{
+  font-size: 18px;
+  color: #111;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+.center h3 span{
+  font-size: 9px;
+  color: #8b8b8b;
+  font-weight: 400;
+}
+.center h2{
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+}
+.center .tag{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.center .tag h4{
+  font-size: 10px;
+  background-color: #e1e1e1;
+  color: #111;
+  font-weight: 400;
+  border: 1px solid #8b8b8b;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #b1b1b1;
+  margin-top: 20px;
+  padding-top: 15px 0;
+}
+.bottom button{
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.bottom h3{
+  font-size: 17px;;
+}
+.bottom p{
+  font-size: 10px;
+  color: #8b8b8b;
+}
