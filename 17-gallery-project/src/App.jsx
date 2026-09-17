@@ -7,24 +7,25 @@ const App = () => {
 
   const getDate = async () => {
     const response = await axios.get(
-      `https://picsum.photos/v2/list?page=${index}&limit=30`,
+      `https://picsum.photos/v2/list?page=${index}&limit=20`,
     );
     setUserData(response.data);
-    console.log(userData);
   };
+  
   useEffect(() => {
     getDate();
   }, [index]);
 
   let printUserData = (
-    <h3 className="text-gray-400  text-sm">No User Available</h3>
+    <h3 className="text-gray-300 font-semibold text-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">Loading...</h3>
   );
 
   if (userData.length > 0) {
+    console.log(printUserData);
     printUserData = userData.map((elem, idx) => {
       return (
         <div key={idx}>
-          <a href={elem.url}>
+          <a href={elem.url} target="_blank">
             <div className="h-40 w-44  rounded-xl overflow-hidden">
               <img
                 className="h-full w-full object-cover"
@@ -41,23 +42,30 @@ const App = () => {
 
   return (
     <div className="bg-black text-white overflow-auto p-4 h-screen">
-      <h1 className="text-5xl fixed">{index}</h1>
-      <div className="flex flex-wrap gap-4 items-center p-2">
+      <div className="flex md:h-[92%] flex-wrap gap-4 items-center p-2">
         {printUserData}
       </div>
       <div className="flex justify-center gap-6 items-center ">
-        <button onClick={()=>{
-          if(index>1){
-            setIndex(index - 1)
-          }
-        }} className="bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold">
+        <button
+          onClick={() => {
+            if (index > 1) {
+              setIndex(index - 1);
+              setUserData([]);
+            }
+          }}
+          className="bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold"
+        >
           Prev
         </button>
-        <button onClick={()=>{
-          if(index<34){
-            setIndex(index + 1)
-          }
-        }} className="bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold">
+        <button
+          onClick={() => {
+            if (index < 34) {
+              setIndex(index + 1);
+              setUserData([]);
+            }
+          }}
+          className="bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold"
+        >
           Next
         </button>
       </div>
