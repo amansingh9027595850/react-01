@@ -38,14 +38,14 @@ const App = () => {
       </div>
       <div className="flex justify-center gap-6 items-center ">
         <button
-          disabled='true'
+        // style={{opacity: index === 1?0.5 :1}}
           onClick={() => {
-            // if (index > 1) {
+            if (index > 1) {
               setIndex(index - 1);
               setUserData([]);
-            // }
+            }
           }}
-          className="bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold"
+          className={`bg-amber-400 w-40 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold ${index === 1? 'opacity-50' : 'opacity-100'} ${index === 1? 'pointer-events-none' : 'pointer-events-auto'} `}
         >
           Prev
         </button>
