@@ -9,6 +9,7 @@ h1 {
   text-decoration: underline;
   font-weight: 600;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 
 
@@ -30,7 +31,7 @@ h1 {
 
 .four_zero_four_bg {
   background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-  height: 500px;
+  height: 70vh;
   background-repeat: no-repeat;
   background-position: center;
 }
