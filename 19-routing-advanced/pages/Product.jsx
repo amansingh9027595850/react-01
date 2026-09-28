@@ -1,12 +1,12 @@
 // import React from 'react'
-import { Link , Outlet } from 'react-router-dom'
+import { NavLink , Outlet } from 'react-router-dom'
 const Product = () => {
   return (
     <div>
       <div className='flex gap-10 justify-center py-4'>
-        <Link className='text-xl font-semibold' to='/product/men'>Men</Link>
-        <Link className='text-xl font-semibold' to='/product/women'>Women</Link>
-        <Link className='text-xl font-semibold' to='/product/kids'>Kids</Link>
+        <NavLink className={({isActive})=> isActive ? 'text-xl font-semibold underline bg-amber-500 py-2 px-4 rounded' : 'text-xl font-semibold py-2 px-4'} to='/product/men'>Men</NavLink>
+        <NavLink className={({isActive})=> isActive ? 'text-xl font-semibold underline bg-amber-500 py-2 px-4 rounded' : 'text-xl font-semibold py-2 px-4'} to='/product/women'>Women</NavLink>
+        <NavLink className={({isActive})=> isActive ? 'text-xl font-semibold underline bg-amber-500 py-2 px-4 rounded' : 'text-xl font-semibold py-2 px-4'} to='/product/kids'>Kids</NavLink>
       </div>
       {/* <h1>Product Pge</h1> */}
       <Outlet />
